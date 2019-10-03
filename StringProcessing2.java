@@ -72,4 +72,36 @@ class StringProcessing2 {
 		}
 		System.out.println(count);
 	}
+	
+	public void MaxWord(String msg) {
+		String cword = "";
+		String mword = "";
+		int cletters = 0;
+		int mletters = 0;
+		String alpha;
+		int i = 0;
+		for(; i<msg.length(); i++) {
+			alpha = msg.substring(i, i+1);
+			if(alpha.equals(" ") | alpha.equals(",") | i == (msg.length()-1)){
+				if(i == (msg.length() - 1) & !alpha.equals(" ")) {
+					cletters++;
+					cword+=alpha;
+				}
+				if(cletters == mletters) {
+					mword = mword + " and " + cword;
+				}
+				if(cletters>mletters) {
+					mletters = cletters;
+					mword = cword;
+				}
+				cletters = 0;
+				cword = "";
+			}
+			else {
+				cword+=alpha;
+				cletters++;
+			}
+		}
+		System.out.println(mword + " contains the most letters with " + mletters + " letters");
+	}
 }

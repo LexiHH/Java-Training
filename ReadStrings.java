@@ -5,6 +5,7 @@ class ReadStrings {
 		//str.WordCount("Hello my friends");
 		//str.PrintWordVertical("Hello my friends");
 		//str.PrintWordsBackwards("Hello my friends");
-		str.find("hello london, I am going to londonlondon","london");
+		//str.find("hello london, I am going to londonlondon","london");
+		str.MaxWord("Doorway Hello my friends, i hate oranges");
 	}
 }
